@@ -1,6 +1,5 @@
 define(['jquery'], function ($) {
 
-    (function ($) {
         $.fn.movingService = function (options) {
             var form_div = $(this);
 
@@ -74,7 +73,6 @@ define(['jquery'], function ($) {
 
         };
 
-    })(jQuery);
 
     function setup_bindings() {
         $("select#moving_lead_MovingFrom_state").bind("change",
