@@ -24,7 +24,9 @@ define(['jquery'], function ($) {
                 delete params.required_fields;
 
                 for (attr in params) {
-                    uri += "moving_lead[" + attr + "]=" + params[attr] + "&";
+                    if (params[attr]) {
+                        uri += "moving_lead[" + attr + "]=" + params[attr] + "&";
+                    }
                 }
                 uri = uri.substring(0, uri.length - 1);
                 base += encodeURI(uri);
